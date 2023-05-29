@@ -1,7 +1,10 @@
 import React from "react";
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
-import Logar from "../Pages/Login";
 import "@testing-library/jest-dom";
+import Logar from "../Pages/Login";
+import { apiLogin } from "../API_URL/login";
+
+jest.mock("../API_URL/login");
 
 describe("Logar", () => {
   it("renders the login form", () => {
@@ -22,7 +25,12 @@ describe("Logar", () => {
     expect(buttonElement).toBeInTheDocument();
   });
 
-  it("logs in successfully when valid email and password are provided", async () => {
+  it("loga com sucesso quando um email e senha válidos são fornecidos", async () => {
+    const response = {
+      status: 400,
+      json: () => Promise.resolve("Incorrect password"),
+    };
+    apiLogin.mockResolvedValueOnce(response);
     render(<Logar />);
 
     const emailInput = screen.getByPlaceholderText("Digite seu e-mail");
@@ -35,9 +43,8 @@ describe("Logar", () => {
     fireEvent.click(buttonElement);
 
     await waitFor(() => {
-      const errorElement = screen.getByText("Ops, ocorreu algum erro!");
-      expect(errorElement.textContent).toBe("Ops, ocorreu algum erro!");
-
+      const errorElement = screen.getByText("Senha incorreta!");
+      expect(errorElement).toBeInTheDocument();
     });
   });
 });

@@ -1,26 +1,15 @@
 import React, { useState } from "react";
 import Logo from "../Imagens/tetrisgif.gif";
 import BotaoLogin from "../Imagens/botao.png";
-import { Erros } from "../componentes/Erros/Erros";
+import { Erros } from "../Uteis /Erros";
+import { apiLogin } from "../API_URL/login";
 
 const Logar = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [erro, setErro] = useState("");
 
-  async function apiLogin(email, password) {
-    const response = await fetch(
-      "https://burger-queen-api-mock-mu.vercel.app/login",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-      }
-    );
-    return response;
-  }
+   
   const BotaoLogar = async (e) => {
     e.preventDefault();
     setErro("");
