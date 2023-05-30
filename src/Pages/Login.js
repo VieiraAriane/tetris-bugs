@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Logo from "../Imagens/tetrisgif.gif";
 import BotaoLogin from "../Imagens/botao.png";
-import { Erros } from "../Uteis /Erros";
+import { Erros } from "../uteis /Erros";
 import { apiLogin } from "../API_URL/login";
 
 const Logar = () => {
@@ -9,15 +9,12 @@ const Logar = () => {
   const [password, setPassword] = useState("");
   const [erro, setErro] = useState("");
 
-   
   const BotaoLogar = async (e) => {
     e.preventDefault();
     setErro("");
     try {
       const response = await apiLogin(email, password);
-      console.log(response)
       if (response.status === 200) {
-        console.log("Logim realizado");
       } else if (response.status === 400) {
         const erro = await response.json();
         const error = Erros(erro);
