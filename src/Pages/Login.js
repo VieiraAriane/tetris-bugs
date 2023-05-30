@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Logo from "../Imagens/tetrisgif.gif";
 import BotaoLogin from "../Imagens/botao.png";
-import { Erros } from "../uteis /Erros";
 import { apiLogin } from "../API_URL/login";
+import { Erros } from "../Uteis /Erros";
 
 const Logar = () => {
   const [email, setEmail] = useState("");
@@ -12,7 +12,7 @@ const Logar = () => {
   const BotaoLogar = async (e) => {
     e.preventDefault();
     setErro("");
-    try {
+    // try {
       const response = await apiLogin(email, password);
       if (response.status === 200) {
       } else if (response.status === 400) {
@@ -20,9 +20,9 @@ const Logar = () => {
         const error = Erros(erro);
         setErro(error);
       }
-    } catch (error) {
-      setErro(Erros(error));
-    }
+    // } catch (error) {
+    //   setErro(Erros(error));
+    // }
   };
 
   return (

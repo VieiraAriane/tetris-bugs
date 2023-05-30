@@ -1,4 +1,4 @@
-import { Erros } from "../uteis /Erros";
+import { Erros } from "../Uteis /Erros";
 
 describe("Erros", () => {
   test("returns correct error message for Incorrect password", () => {
