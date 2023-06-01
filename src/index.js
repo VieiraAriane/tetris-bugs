@@ -1,12 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import Logar from './Pages/Login';
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import AppRoutes from "./routes";
+
+ReactDOM.render(
   <React.StrictMode>
-    <Logar />
-  </React.StrictMode>
+    <AppRoutes />
+  </React.StrictMode>,
+  document.getElementById("root")
 );
-
-
