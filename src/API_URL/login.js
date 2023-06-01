@@ -1,6 +1,6 @@
+const API_URL = "https://burger-queen-api-mock-mu.vercel.app"
 export async function apiLogin(email, password) {
-  const response = await fetch(
-    "https://burger-queen-api-mock-mu.vercel.app/login",
+  const response = await fetch(`${API_URL}/login`,
     {
       method: "POST",
       headers: {
@@ -9,5 +9,14 @@ export async function apiLogin(email, password) {
       body: JSON.stringify({ email, password }),
     }
   );
-  return response;
+ 
+  if(response.status === 200) {
+    console.log(response);
+ 
+
+   
+} 
+return response.json();
 }
+
+ 
