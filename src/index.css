@@ -53,7 +53,7 @@ body {
   width: 20rem;
   gap: 1rem;
   height: 8em;
-  bottom: 12rem;
+  bottom: 8rem;
   }
  .formulario input{
   border: 2px solid red;
@@ -105,7 +105,6 @@ p {
   text-align: center;
   font-size: 1.2rem;
   margin: 0;
-  width: 115%;
 }
 @media (max-width: 767px) {
  .logo{
@@ -151,4 +150,8 @@ p {
   font-size: 1.5rem;
   margin-bottom: 0;
 }
+}
+/* pagina de atendimento */
+ul{
+  color: white
 }

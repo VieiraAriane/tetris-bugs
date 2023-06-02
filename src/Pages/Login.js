@@ -2,32 +2,33 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Logo from "../Imagens/tetrisgif.gif";
 import BotaoLogin from "../Imagens/botao.png";
-import { Login, setTokenRole} from "../API_URL/autenticacao";
-import { Erros } from "../Uteis /Erros";
+import { apiLogin} from "../API_URL/autenticacao";
 
 const Logar = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [erro, setErro] = useState("");
-  const navigate = useNavigate();
-
-
-  const BotaoLogar = (e) => {
+  const redir = useNavigate()
+   
+  const BotaoLogar = async (e) => {
     e.preventDefault();
-    Login(email, password)
-    .then((response)=> {
-      console.log(response)
-      if (!response.code) return;
-      setTokenRole(response.token, response.role);
-      if (response.role === 'atendente') {
-        navigate('/pedidos')
+    setErro("");
+    try {
+      const response = await apiLogin(email, password);
+      if (response.user.role === 'atendente') {
+        redir('/pedidos');
       }
-    })
-    .catch((error) => {
-      const errorMessage = Erros(error);
-      setErro(errorMessage)
-    });
-  }
+      if (response.user.role === 'chefe') {
+        redir('/preparo');
+      }
+      if (response.user.role === 'adm') {
+        redir('/administracao');
+      }
+    } catch (error) {
+      setErro(error.message);
+    }
+  };
+
   return (
     <>
       <div className="root">

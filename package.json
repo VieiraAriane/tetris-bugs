@@ -11,6 +11,8 @@
     "node-fetch": "^3.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-native-safe-area-context": "^4.5.3",
+    "react-native-screens": "^3.20.0",
     "react-router-dom": "^6.11.2",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.10"
@@ -46,5 +48,9 @@
     "@babel/preset-react": "^7.22.3",
     "babel-jest": "^29.5.0",
     "jest": "^27.5.1"
-  }
+  },
+  
+    "proxy": "https://burger-queen-api-mock-mu.vercel.app"
+  
+  
 }

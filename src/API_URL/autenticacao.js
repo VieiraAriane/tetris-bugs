@@ -1,35 +1,25 @@
+const Api_Url = "https://burger-queen-api-mock-mu.vercel.app";
 
-export const setTokenRole = (token, role) => {
-  localStorage.setItem('token', token);
-  localStorage.setItem('role', role);
-}
-export const getToken = () => localStorage.getItem('token');
-export const getRole = () => localStorage.getItem('role');
-
-
-
-const Requisicao = (endPoint, method, headers, body) => {
-  return fetch(`https://burger-queen-api-mock-mu.vercel.app${endPoint}`, {
-    method,
+const setToken = (token) => {
+  if (token) {
+    localStorage.setItem("authToken", token);
+  }
+};
+// requisão para fazer login com email e senha
+export async function apiLogin(email, password) {
+  const response = await fetch(`${Api_Url}/login`, {
+    method: "POST",
     headers: {
       "Content-Type": "application/json",
-      ...headers
     },
-    body: JSON.stringify(body),
-  })
-  .then((response) => response.json())
-  .then ((obj) => {
-    if (obj.code){
-      console.log(obj.message)
-      throw (obj.message)
-    }else {
-      console.log(obj)
-      return obj
-    }
-  })
-  
+    body: JSON.stringify({ email, password }),
+  });
+  if (response.status === 400) {
+    throw new Error("Confira suas credenciais");
+  }
+  const data = await response.json();
+  const authToken = data.accessToken;
+  setToken(authToken);
+
+  return data;
 }
-export const Login = (email, password) => Requisicao('/login', 'POST', null, {
-  email,
-  password
-})
