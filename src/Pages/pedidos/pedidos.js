@@ -1,14 +1,13 @@
-import NavMenu from "./componentes/navegacao";
-import Comanda from "./componentes/comanda";
-import MenuPedido from "./componentes/menu";
-
+import MenuPedido from "./componentes/menu/menu";
+import NavMenu from './componentes/navegaçao/navegacao'
  function Atendimento() {
   return (
     <>
    <NavMenu/>
-   <Comanda/>
+   {/* <Comanda/> */}
    <MenuPedido/>
    </>
+  
   );
 };
 export default Atendimento;

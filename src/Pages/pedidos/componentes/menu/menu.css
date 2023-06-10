@@ -1,0 +1,29 @@
+/* pagina de atendimento */
+.pagina-atendimento{
+  display: grid;
+  grid-template-columns: 1fr 1fr;  
+}
+.menu-selecao{
+  margin-top: 10%;
+  margin-left: 10%;
+}
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: ABeeZee ;
+  font-size: 1.6rem;
+  width: 55%;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgba(54, 11, 76, 1.5);
+  margin-bottom: 8%;
+  padding: 15px;
+  border: 1px solid white;
+
+}
+.item-price{
+  margin-top: 25px;
+}
+
+

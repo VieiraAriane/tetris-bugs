@@ -13,145 +13,16 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.animacao {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.logo {
-  display: block;
-  margin: 0;
-  color: #00D8D8;
-  font-size: 3rem;
-  position: relative;
-  top: 5rem;
-  letter-spacing: 0.06em;
-  font-size: 2rem;
-}
-
-.imagem-container {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-}
-.imagem {
-  display: block;
-  max-width: 70%;
-  margin: 0;
-  margin-top: 7rem;
-  margin-bottom: 0;
-}
-
-.formulario{
-  position: absolute;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 20rem;
-  gap: 1rem;
-  height: 8em;
-  bottom: 8rem;
-  }
- .formulario input{
-  border: 2px solid red;
-  height: 3em;
-  border-radius: 10px;
-  text-align: center;
-  color: white ;
-  background-color: black;
-  font-size: 1.4rem;
-   }
- 
 input::placeholder{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: antiquewhite;
-}
-.botao-login {
-  position: relative;
-  margin: 0;
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  top:0.6rem;
-}
-.play {
-  margin: 0;
-  width: 12em;
-}
-.footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-   text-align: center;
-  border-top: 0.1rem solid red;
-  margin: 0;
-  padding: 10px;
-}
-.footer h3 {
-  margin: 0;
-  font-size: 0.9rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
-
-}
-
-p {
-  color: white;
-  text-align: center;
-  font-size: 1.2rem;
-  margin: 0;
-}
-@media (max-width: 767px) {
- .logo{
-  font-size: 1.5rem;
-  top: 4rem;
- }
-  .imagem{
-  max-width: 90%;  
-   margin-top: 6rem;
   }
-  .formulario{
-    width: 13rem;
-    margin-top: 3rem;
+  ul {
+    padding: 0;
+    list-style-type: none; /* Remover a pontinha no início */
   }
-  .formulario input {
-    font-size: 1rem;
-    padding: 0.2rem;
+  
+  li {
+    text-decoration: none; /* Remover decoração de texto */
   }
-  .play{
-    width: 7rem;
-  }
-  .footer {
-    font-size: 0.6rem;
-    margin-bottom: 0;
-  }
-}
-@media (min-width: 1024px) {
-.logo{
-  font-size: 4rem;
-}
-.formulario{
-  bottom: 14rem;
-}
-.formulario input {
-  font-size: 2rem;
-  padding: 0.5rem;
-  width:30rem;
-}
-.play{
-  width: 15rem;
-}
-.footer h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0;
-}
-}
-/* pagina de atendimento */
-ul{
-  color: white
-}
+  

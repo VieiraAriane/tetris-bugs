@@ -1,18 +1,17 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Logar from "./Pages/Login";
+import Logar from "./Pages/login/Login";
 import Atendimento from "./Pages/pedidos/pedidos";
-
-//import Menu from "./Pages/pedidos";
-
+import Cozinha from './Pages/pedidos/componentes/cozinha/cozinha'
 function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Logar />}/>
-        <Route path="/pedidos" element={<Atendimento />}/>
+        <Route path="/" element={<Logar />} />
+        <Route path="/pedidos" element={<Atendimento />} />
+        <Route path="/cozinha" element={<Cozinha/>} />
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
 export default AppRoutes;

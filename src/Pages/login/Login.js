@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Logo from "../Imagens/tetrisgif.gif";
-import BotaoLogin from "../Imagens/botao.png";
-import { apiLogin} from "../API_URL/autenticacao";
+import Logo from '../../Imagens/tetrisgif.gif'
+import BotaoLogin from '../../Imagens/botao.png'
+import { apiLogin} from "../../API_URL/autenticacao";
+import './login.css'
 
 const Logar = () => {
   const [email, setEmail] = useState("");
@@ -33,6 +34,7 @@ const Logar = () => {
     <>
       <div className="root">
         <section className="animacao">
+          
           <h1 className="logo">Hamburgueria</h1>
           <figure className="imagem-container">
             <img src={Logo} alt="Logo tetris em movimento" className="imagem" />
