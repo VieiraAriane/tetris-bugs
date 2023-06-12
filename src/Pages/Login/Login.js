@@ -1,45 +1,40 @@
 import React, { useState } from "react";
-import Logo from "../Imagens/tetrisgif.gif";
-import BotaoLogin from "../Imagens/botao.png";
-import { Erros } from "../Uteis /Erros";
-import { apiLogin } from "../API_URL/login";
 import { useNavigate } from "react-router-dom";
+import Logo from '../../Imagens/tetrisgif.gif'
+import BotaoLogin from '../../Imagens/botao.png'
+import { apiLogin} from "../../API_URL/autentencacao";
+import './login.css'
 
 const Logar = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [erro, setErro] = useState("");
-  const redir = useNavigate();
-
+  const redir = useNavigate()
+   
   const BotaoLogar = async (e) => {
     e.preventDefault();
     setErro("");
     try {
       const response = await apiLogin(email, password);
-    localStorage.setItem('token', response.accessToken)
-      console.log(response)
       if (response.user.role === 'atendente') {
-        console.log("Login realizado");
-        redir("/pedidos")
-      } else if (response.status === 400) {
-        const erro = await response.json();
-        const error = Erros(erro);
-        setErro(error);
+        redir('/pedidos');
+      }
+      if (response.user.role === 'chefe') {
+        redir('/preparo');
+      }
+      if (response.user.role === 'adm') {
+        redir('/administracao');
       }
     } catch (error) {
-      setErro(Erros(error));
-      //console.log('error:', error)
-    //console.log('erro:', error.message)
-    
+      setErro(error.message);
     }
   };
-
-
 
   return (
     <>
       <div className="root">
         <section className="animacao">
+          
           <h1 className="logo">Hamburgueria</h1>
           <figure className="imagem-container">
             <img src={Logo} alt="Logo tetris em movimento" className="imagem" />

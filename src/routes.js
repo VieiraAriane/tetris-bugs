@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Logar from "./Pages/Login";
+import Logar from "./Pages/Login/Login";
 import Atendimento from "./Pages/pedidos/pedidos";
 
 //import Menu from "./Pages/pedidos";

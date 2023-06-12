@@ -1,0 +1,38 @@
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  border-bottom: 1px solid red;
+}
+.link {
+  text-decoration: none;
+  color: white;
+}
+.nav {
+  display: flex;
+  gap: 3rem;
+  font-size: 2rem;
+}
+.opcoes-menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.menu-opcoes{
+  display: flex;
+  gap: 26px;
+}
+.cafe, .principal{
+  color:white;
+  text-decoration: none;
+  font-size: 1.8rem;
+  border: 1px solid #00D8D8;
+  padding: 11px 14px 11px 14px;
+  border-radius: 3px;
+ }
+.cafe:hover,.principal:hover {
+  background-color: #00D8D8;
+  color: black;
+}
