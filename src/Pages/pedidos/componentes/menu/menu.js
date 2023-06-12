@@ -23,8 +23,10 @@ function MenuPedido() {
         <div className="menu-selecao">
           <section>
             <ul>
-              {menu.map((item) => (
-                <li
+            {menu.map((item) => {
+                  return item.type === 'Desjejum' &&   
+                  <li
+                  
                   className="menu-item"
                   onClick={() => adicionar(item)}
                   key={item.id}
@@ -32,7 +34,18 @@ function MenuPedido() {
                   <span className="item-name">{item.name}</span>
                   <span className="item-price">R${item.price}</span>
                 </li>
-              ))}
+            })}
+            {menu.map((item) => {
+                  return item.type === 'Principal' &&   
+                  <li
+                  className="menu-item"
+                  onClick={() => adicionar(item)}
+                  key={item.id}
+                >
+                  <span className="item-name">{item.name}</span>
+                  <span className="item-price">R${item.price}</span>
+                </li>
+            })}
             </ul>
           </section>
         </div>
