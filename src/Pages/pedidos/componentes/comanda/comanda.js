@@ -6,6 +6,7 @@ import { adicionarItemComanda } from "../../../../uteis/adicionarItemComanda";
 const Comanda = ({ comanda, setComanda }) => {
   const [cliente, setCliente] = useState("");
   const [mesa, setMesa] = useState("");
+  // const [total, setTotal] = useState(0);
  
   const aumentar = (item) => { adicionarItemComanda(item, comanda, setComanda); 
   };
@@ -16,6 +17,8 @@ const Comanda = ({ comanda, setComanda }) => {
     const novaComanda = comanda.filter((comandaItem) => comandaItem.id !== item.id);
     setComanda(novaComanda);
   };
+
+
   return (
     <>
     <div className="detalhamento-comanda">

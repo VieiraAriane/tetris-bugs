@@ -21,4 +21,3 @@ export const obterProdutos = async () => {
     throw error;
   }
 };
-

@@ -8,3 +8,9 @@ root.render(
   <AppRoutes/> 
  
 );
+<<<<<<< HEAD
+=======
+
+
+  
+>>>>>>> 4fb37555fed961577a3c20b2f838b4f6ffdd0157
