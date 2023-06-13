@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Logo from '../../Imagens/tetrisgif.gif'
 import BotaoLogin from '../../Imagens/botao.png'
-import { apiLogin} from "../../API_URL/autenticacao";
+import {apiLogin} from '../../API_URL/autenticacao'
 import './login.css'
 
 const Logar = () => {

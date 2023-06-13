@@ -2,7 +2,7 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 25px;
+  padding: 13px;
   border-bottom: 1px solid red;
 }
 .link {
@@ -12,27 +12,25 @@
 .nav {
   display: flex;
   gap: 3rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
-.opcoes-menu{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+.sair
+ {
+  color: #00D8D8;
+  transform: rotate(270deg);
+  font-size: 30px;
 }
-.menu-opcoes{
-  display: flex;
-  gap: 26px;
+.hambuguer{
+  color: #00D8D8;
+  transform: rotate(0deg);
+  font-size: 30px;
 }
-.cafe, .principal{
-  color:white;
-  text-decoration: none;
-  font-size: 1.8rem;
-  border: 1px solid #00D8D8;
-  padding: 11px 14px 11px 14px;
-  border-radius: 3px;
- }
-.cafe:hover,.principal:hover {
-  background-color: #00D8D8;
-  color: black;
+
+@media (max-width: 600px) {
+  .nav{
+    font-size: 1rem;
+  }
+  .sair, .hambuguer{
+    font-size: 20px;
+  }
 }

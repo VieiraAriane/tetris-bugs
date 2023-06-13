@@ -7,10 +7,7 @@ function NavMenu() {
       <header className="header">
         <Link to="/" className="link">
           {" "}
-          <FaArrowCircleUp
-            size={40}
-            style={{ color: "#28a2a4", transform: "rotate(270deg)" }}
-          />
+          <FaArrowCircleUp className="sair"          />
         </Link>
         <div className="nav">
           <Link to="/" className="link">
@@ -20,18 +17,9 @@ function NavMenu() {
             Pedidos
           </Link>
         </div>
-        <FaHamburger size={40} style={{ color: "#28a2a4" }} />
+        <FaHamburger className="hambuguer"/>
       </header>
-      <section className="opcoes-menu">
-        <div className="menu-opcoes">
-          <Link to="/pedidos" className="cafe">
-            Desjejun
-          </Link>
-          <Link to="/pedidos" className="principal">
-            Principal
-          </Link>
-        </div>
-      </section>
+      
     </>
   );
 }

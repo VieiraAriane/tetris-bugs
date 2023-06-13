@@ -1,28 +1,63 @@
-/* pagina de atendimento */
-.pagina-atendimento{
-  display: grid;
-  grid-template-columns: 1fr 1fr;  
+.menu-opcoes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 26px;
 }
-.menu-selecao{
+.cafe, .principal{
+  color:white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  border: 1px solid #00D8D8;
+  padding: 11px 14px 11px 14px;
+  border-radius: 3px;
+  background-color: black;
+ }
+.cafe:hover,.principal:hover {
+  background-color: #00D8D8;
+  color: black;
+}
+/* pagina de atendimento */
+.pagina-atendimento {
+  display: grid;
+  grid-template-columns: 0.6fr 1fr;
+}
+
+ .menu-selecao{
+  display: flex;
   margin-top: 10%;
   margin-left: 10%;
-}
+} 
+/* tratando da lista de itens */
 .menu-item {
   display: flex;
   flex-direction: column;
   color: white;
   font-family: ABeeZee ;
-  font-size: 1.6rem;
-  width: 55%;
+  font-size: 1.2rem;
+  width: auto;
   border-radius: 10px;
   text-align: center;
   background-color: rgba(54, 11, 76, 1.5);
   margin-bottom: 8%;
-  padding: 15px;
+  padding: 8px;
   border: 1px solid white;
-
 }
 .item-price{
-  margin-top: 25px;
+  margin-top: 6px;
 }
-
+@media (max-width: 600px) {
+  .cafe, .principal{
+    font-size: 0.9rem;
+    padding: 5px 10px 5px 10px;
+  }
+  .menu-item{
+    font-size: 0.7rem;
+    padding: 5px;
+    margin-right: 5px;
+  }
+  .item-price{
+    margin-top: 0;
+  }
+}

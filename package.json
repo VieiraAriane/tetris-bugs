@@ -51,5 +51,5 @@
     "babel-jest": "^29.5.0",
     "jest": "^27.5.1"
   },
-  "proxy": "https://burger-queen-api-mock-mu.vercel.app"
+  "proxy": "http://localhost:8080"
 }
