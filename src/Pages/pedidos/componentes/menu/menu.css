@@ -8,11 +8,13 @@
 .cafe, .principal{
   color:white;
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 2rem;
   border: 1px solid #00D8D8;
   padding: 11px 14px 11px 14px;
   border-radius: 3px;
   background-color: black;
+  letter-spacing: 0.04em;
+
  }
 .cafe:hover,.principal:hover {
   background-color: #00D8D8;
@@ -34,26 +36,28 @@
   display: flex;
   flex-direction: column;
   color: white;
-  font-family: ABeeZee ;
-  font-size: 1.2rem;
+  font-family: 'THUNDERBOLT73-Regular', sans-serif;
+  font-size: 1.8rem;
   width: auto;
   border-radius: 10px;
   text-align: center;
   background-color: rgba(54, 11, 76, 1.5);
   margin-bottom: 8%;
-  padding: 8px;
+  padding: 3px;
   border: 1px solid white;
+  letter-spacing: 0.04em;
+
 }
 .item-price{
-  margin-top: 6px;
+  margin-bottom: 1px;
 }
 @media (max-width: 600px) {
   .cafe, .principal{
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: 5px 10px 5px 10px;
   }
   .menu-item{
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     padding: 5px;
     margin-right: 5px;
   }

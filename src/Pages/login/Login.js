@@ -19,8 +19,8 @@ const Logar = () => {
       if (response.user.role === 'atendente') {
         redir('/pedidos');
       }
-      if (response.user.role === 'chefe') {
-        redir('/preparo');
+      if (response.user.role === 'chef') {
+        redir('/cozinha');
       }
       if (response.user.role === 'adm') {
         redir('/administracao');
@@ -35,7 +35,7 @@ const Logar = () => {
       <div className="root">
         <section className="animacao">
           
-          <h1 className="logo">Hamburgueria</h1>
+          <p className="logo">Hamburgueria</p>
           <figure className="imagem-container">
             <img src={Logo} alt="Logo tetris em movimento" className="imagem" />
           </figure>

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from "react-router-dom";
 import { FaArrowCircleUp, FaHamburger } from "react-icons/fa";
 import "./navegacao.css";
@@ -7,13 +8,13 @@ function NavMenu() {
       <header className="header">
         <Link to="/" className="link">
           {" "}
-          <FaArrowCircleUp className="sair"          />
+          <FaArrowCircleUp className="sair"/>
         </Link>
         <div className="nav">
           <Link to="/" className="link">
             Menu
           </Link>
-          <Link to="/" className="link">
+          <Link to="/cozinha" className="link">
             Pedidos
           </Link>
         </div>

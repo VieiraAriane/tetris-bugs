@@ -27,6 +27,7 @@ describe("Logar", () => {
   it("loga com sucesso quando um email e senha válidos são fornecidos", async () => {
     const response = {
       status: 400,
+      // eslint-disable-next-line no-undef
       json: () => Promise.resolve("Incorrect password"),
     };
     apiLogin.mockResolvedValueOnce(response);

@@ -1,7 +1,10 @@
+
+import React from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Logar from "./Pages/login/Login";
-import Atendimento from "./Pages/pedidos/pedidos";
+import Atendimento from "./Pages/pedidos/Atendimento";
 import Cozinha from './Pages/pedidos/componentes/cozinha/cozinha'
+
 function AppRoutes() {
   return (
     <BrowserRouter>

@@ -2,16 +2,35 @@ import React, { useState, useEffect } from "react";
 import { diminuirQuantidade } from "../../../../uteis/diminuirQuantidade";
 import { adicionarItemComanda } from "../../../../uteis/adicionarItemComanda";
 import { calcularSubtotal } from "../../../../uteis/calcularSubtotal";
+import { enviarPedido } from "../../../../API_URL/pedidos";
 import BotaoLogin from "../../../../Imagens/botao.png";
-import "./comanda.css";
 import BotaoMais from "../../../../Imagens/botaoMais.png";
 import BotaoMenos from "../../../../Imagens/botaoMenos.png";
 import BotaoExluir from "../../../../Imagens/botaoExcluir.png";
+import "./comanda.css";
 
 const Comanda = ({ comanda, setComanda }) => {
   const [cliente, setCliente] = useState("");
   const [mesa, setMesa] = useState("");
   const [total, setTotal] = useState(0);
+  const [erro, setErro] = useState("");
+
+  const enviarComanda = async (e) => {
+    e.preventDefault();
+    setCliente("");
+    setMesa("");
+    setComanda([]);
+    setErro("");
+    if ((!cliente && !mesa) || !cliente || !mesa || comanda.length === 0) {
+      setErro("A comanda não pode ser enviada vazia");
+      return;
+    }
+    try {
+      await enviarPedido(comanda, cliente, mesa);
+    } catch (error) {
+      setErro(error.message);
+    }
+  };
 
   const aumentar = (item) => {
     adicionarItemComanda(item, comanda, setComanda);
@@ -20,6 +39,7 @@ const Comanda = ({ comanda, setComanda }) => {
   const diminuir = (item) => {
     diminuirQuantidade(item, comanda, setComanda);
   };
+
   const excluir = (item) => {
     const novaComanda = comanda.filter(
       (comandaItem) => comandaItem.id !== item.id
@@ -98,14 +118,15 @@ const Comanda = ({ comanda, setComanda }) => {
           <span className={`subtotal ${comanda.length > 0 ? "mostrar" : ""}`}>
             Subtotal: R${total}
           </span>
-          <button className="botao-login">
-            <img
-              src={BotaoLogin}
-              alt="Logo tetris em movimento"
-              className="enviar"
-            />
-          </button>
         </section>
+        <button onClick={enviarComanda} className="botao-login">
+          <img
+            src={BotaoLogin}
+            alt="Logo tetris em movimento"
+            className="enviar"
+          />
+        </button>
+        {erro && <p className="erro">{erro}</p>}
       </div>
     </>
   );

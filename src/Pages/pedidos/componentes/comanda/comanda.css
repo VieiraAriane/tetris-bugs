@@ -27,57 +27,54 @@
   border-color: transparent;
   border-bottom: 2px solid rgba(54, 11, 76, 1.5);
   text-align: center;
-  font-size: 1.2rem;
+  font-size:1.5rem;
+  letter-spacing: 0.04em;
+
 }
 .resumo-comanda{
+  margin: 0;
+  color: white;
+  font-size: 1.8rem;
   padding: 5px;
-  letter-spacing: 2px; /* Espaçamento entre as letras */
+  letter-spacing: 0.07em;
 }
 .nome-cliente::placeholder,
 .mesa-cliente::placeholder {
   color: white;
-  font-size: 1.3rem;
+  font-size:1.6rem;
+  letter-spacing: 0.07em;
 }
 .lista-comanda{
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 75%;
+  width: 80%;
   border-radius: 10px;
   text-align: center;
-  padding: 15px;
   border: 2px solid rgba(54, 11, 76, 1.5);
 }
 .comanda-item{
     display: flex;
     flex-direction: column;
     color: white;
-    font-family: ABeeZee;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     align-items: center;
     border: 1px solid #00D8D8;
     margin-bottom: 8px;
-    padding: 15px;
+    padding:5px;
     border-radius: 5px;
+    letter-spacing: 0.06em;
+  }
+  .comanda-item p {
+    font-size: 1.6rem;
   }
   .item-name{
     margin-bottom: 10px;
   }
-  .sessao-botoes {
+   .sessao-botoes {
     display: flex;
-    justify-content: stretch;
-    gap: 20px;
-    align-items: center;
-    margin-bottom: 5px;
+    gap: 15px;
   }
-  
-  .sessao-botoes button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-    
-
 .aumentar img,
 .diminuir img,
 .excluir img {
@@ -88,7 +85,8 @@
 .subtotal {
   color: white;
   display: none;
-  letter-spacing: 2px; /* Espaçamento entre as letras */
+  font-size:1.7rem;
+  letter-spacing: 0.07em;
   
 }
 
@@ -98,44 +96,44 @@
   .enviar{
     position: relative;
     width: 150px;
-    top: 70px
   }
-  .footer{
-    display: none
-  }
+ 
   @media (max-width: 600px) {
 .nome-cliente, .mesa-cliente{
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 .nome-cliente::placeholder,
 .mesa-cliente::placeholder {
   color: white;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
 }
 .lista-comanda{
   width: 70%;
 }
 .lista-comanda p{
-   font-size: 0.7rem;
+   font-size: 1.2rem;
    padding: 0;
 }
 .enviar{
   width: 95px;
 }
-.item-name{
-  font-size: 0.7rem;
+.item-name, .item-price{
+  font-size: 1rem;
 }
 .comanda-item{
   padding: 10px;
 }
 .aumentar img, .diminuir img, .excluir img {
-    width: 16px;
-    height: 16px;
+    width: 15px;
+    height: 15px;
 }
 .subtotal{
-  font-size: 0.7rem;
+  font-size: 1rem;
 }
   }
 
 
-
+/* cliente e mesa: fonte de fundo ta no nome-cliente. O de cima no plachehorlder */
+/* Apresentar pedidos em ordem, do antigo para mais recente */
+/* o chefe deve atualizar o status e enviar uma notifição de pronto para o atendente */
+/* apresentar tempo total do envio ate a finalização */

@@ -1,32 +1,51 @@
+@font-face {
+  font-family: 'THUNDERBOLT73-Regular';
+  src: url('./fonte/THUNDERBOLT73-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'THUNDERBOLT73-Bold';
+  src: url('./fonte/THUNDERBOLT73-Bold.otf') format('opentype');
+}
+
 body {
+  font-family: 'THUNDERBOLT73-Regular', sans-serif;
   margin: 0;
   box-sizing: border-box;
-  font-family: Fredoka One;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
- }
+}
 
- .root {
+.root {
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-input::placeholder{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+input::placeholder {
+  font-family: 'THUNDERBOLT73-Regular', sans-serif;
   color: white;
-  }
-  ul {
-    color: white;
-    padding: 0;
-    list-style-type: none; /* Remover a pontinha no início */
-  }
-  
-  li {
-    text-decoration: none; /* Remover decoração de texto */
-  }
-  button{
-    background-color: transparent;
-    border: none;
-  }
+}
+/* input{
+  font-family: 'THUNDERBOLT73-Regular', sans-serif;
+ } */
+ul {
+  color: white;
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+
+  text-decoration: none;
+}
+span{
+  font-family: 'THUNDERBOLT73-Regular', sans-serif;
+}
+button {
+  font-family: 'THUNDERBOLT73-Bold', sans-serif;
+  background-color: transparent;
+  border: none;
+}
