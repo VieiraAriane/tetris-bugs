@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import Logar from "../Pages/Login";
+import {Logar} from '../Pages/login/Login'
 import { apiLogin } from "../API_URL/autenticacao";
 jest.mock("../API_URL/autenticacao");
 

@@ -1,5 +1,5 @@
-const Api_Url = "http://localhost:8080";
-// const Api_Url = "https://burger-queen-api-mock-mu.vercel.app";
+// const Api_Url = "http://localhost:8080";
+const Api_Url = "https://burger-queen-api-mock-mu.vercel.app";
 
 const setToken = (token) => {
   if (token) {
@@ -11,8 +11,6 @@ const setUserId = (userId) => {
     localStorage.setItem("userId", userId);
   }
 };
-
-
 
 // requisão para fazer login com email e senha
 export async function apiLogin(email, password, id) {

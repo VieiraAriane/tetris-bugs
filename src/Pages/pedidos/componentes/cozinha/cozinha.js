@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {obterPedidos} from '../../../../API_URL/pedidos';
+import { NavMenu} from '../../../../Pages/pedidos/componentes/navegaçao/navegacao'
 import "./cozinha.css";
 function Cozinha() {
   const [pedidosRecebidos, setPedidosRecebidos] = useState([]);
@@ -18,6 +19,8 @@ function Cozinha() {
   }, []);
 
   return (
+    <>
+ <NavMenu/>
     <div className="pedido-container">    
      {pedidosRecebidos.map((pedido) => (
      <div className="pedido-item" key={pedido.id}>
@@ -26,8 +29,8 @@ function Cozinha() {
       <p className="titulo">Nº pedido: {pedido.id}</p>
       <p className="titulo">Cliente: {pedido.client}</p>
       <p className="titulo">Mesa: {pedido.mesa}</p>
-      <p className="status">Status: {pedido.status}</p>
-          <ul>
+      <p className="status">{pedido.status}</p>
+           <ul>
             <p className="pedido">Pedido:</p>
         {pedido.products.map((item) => (
           <li key={item.product.id}>
@@ -38,8 +41,10 @@ function Cozinha() {
             </div>
       ))}
     </div>
+    </>
   );
   
 }
+  
 
 export default Cozinha;

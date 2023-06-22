@@ -33,8 +33,7 @@ const Logar = () => {
   return (
     <>
       <div className="root">
-        <section className="animacao">
-          
+        <section className="figura">
           <p className="logo">Hamburgueria</p>
           <figure className="imagem-container">
             <img src={Logo} alt="Logo tetris em movimento" className="imagem" />

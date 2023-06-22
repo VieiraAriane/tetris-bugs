@@ -34,6 +34,7 @@
   margin: 0;
 }
 .status {
+  text-align: center;
   color: white;
   border: 1px solid red;
   border-radius: 5px;
@@ -49,13 +50,11 @@
   letter-spacing: 0.07em;
   margin-bottom: 10px;
 }
-
 .produto-qty {
   font-size: 1.5rem;
   letter-spacing: 0.07em;
   margin-right: 5px;
 }
-
 .produto-name {
   font-size: 1.5rem;
   letter-spacing: 0.07em;

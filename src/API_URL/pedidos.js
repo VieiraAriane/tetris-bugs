@@ -1,13 +1,12 @@
 import { format } from 'date-fns';
 
-const Api_Url = "http://localhost:8080";
-// const Api_Url = "https://burger-queen-api-mock-mu.vercel.app";
+// const Api_Url = "http://localhost:8080";
+const Api_Url = "https://burger-queen-api-mock-mu.vercel.app";
 
 const pegaToken = () => {
   const token = localStorage.getItem("authToken");
   return token;
 };
-const userId = localStorage.getItem("userId");
 
 export const obterPedidos = async () => {
   console.log('Obtendo pedidos...');
@@ -34,7 +33,7 @@ export const enviarPedido = async (comanda, cliente, mesa) => {
 
   const authToken = pegaToken();
     const pedido = {
-        user: userId,
+       user: localStorage.getItem("userId"),
        mesa,
        client: cliente,
        products: comanda.map((item) => ({
