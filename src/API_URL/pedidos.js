@@ -1,7 +1,7 @@
 import { format } from 'date-fns';
 
-// const Api_Url = "http://localhost:8080";
-const Api_Url = "https://burger-queen-api-mock-mu.vercel.app";
+const Api_Url = "http://localhost:8080";
+//const Api_Url = "https://burger-queen-api-mock-mu.vercel.app";
 
 const pegaToken = () => {
   const token = localStorage.getItem("authToken");
@@ -20,7 +20,9 @@ export const obterPedidos = async () => {
   });
   if (!response.ok) {
     throw new Error("Erro ao obter pedidos");
+    
   }
+ 
   return response.json();
 
 };

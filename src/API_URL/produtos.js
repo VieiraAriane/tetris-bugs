@@ -1,5 +1,5 @@
-// const Api_Url = "http://localhost:8080";
-const Api_Url = "https://burger-queen-api-mock-mu.vercel.app";
+const Api_Url = "http://localhost:8080";
+//const Api_Url = "https://burger-queen-api-mock-mu.vercel.app";
 
 const pegaToken = () => {
   const token = localStorage.getItem("authToken");

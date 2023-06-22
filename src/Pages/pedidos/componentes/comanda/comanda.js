@@ -30,6 +30,7 @@ const Comanda = ({ comanda, setComanda }) => {
     } catch (error) {
       setErro(error.message);
     }
+    alert ("Pedidos enviado com sucesso! adicional modal");
   };
 
   const aumentar = (item) => {
