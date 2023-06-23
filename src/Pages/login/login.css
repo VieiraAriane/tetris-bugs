@@ -6,7 +6,6 @@
 
 .logo {
   display: block;
-  margin: 0;
   color: #00D8D8;
   font-size: 4rem;
   position: relative;
@@ -19,6 +18,7 @@
   display: flex;
   justify-content: center;
 }
+
 .imagem {
   display: block;
   max-width: 70%;
@@ -27,7 +27,7 @@
   margin-bottom: 0;
 }
 
-.formulario{
+.formulario {
   position: absolute;
   margin: 0;
   display: flex;
@@ -38,7 +38,7 @@
   bottom: 6rem;
 }
 
-.formulario input{
+.formulario input {
   width: 70%;
   border: 2px solid red;
   height: auto;
@@ -47,8 +47,8 @@
   background-color: black;
   font-size: 1.8rem;
   color: white;
-   }
- 
+}
+
 .botao-login {
   position: relative;
   margin: 0;
@@ -56,22 +56,25 @@
   border: none;
   padding: 0;
   cursor: pointer;
-  top:0.6rem;
+  top: 0.6rem;
 }
+
 .play {
   margin: 0;
   width: 10rem;
 }
+
 .footer {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-   text-align: center;
+  text-align: center;
   border-top: 0.1rem solid red;
   margin: 0;
   padding: 10px;
 }
+
 .footer h3 {
   margin: 0;
   font-size: 0.9rem;
@@ -80,59 +83,78 @@
 
 }
 
-.erro{
+.sucesso {
+  color: red;
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 40px;
+}
+
+.erro {
   color: white;
   text-align: center;
   font-size: 1.5rem;
   margin-top: 15px;
   border-bottom: 1px solid yellowgreen;
 }
+
 @media (max-width: 767px) {
- .logo{
-  font-size: 2.6rem;
-  top: 4rem;
- }
-  .imagem{
-    max-width: 90%;  
-   margin-top: 6rem;
+  .logo {
+    font-size: 2.6rem;
+    top: 4rem;
   }
-  .formulario{
+
+  .imagem {
+    max-width: 90%;
+    margin-top: 6rem;
+  }
+
+  .formulario {
     width: 15rem;
     margin-top: 3rem;
   }
+
   .formulario input {
     font-size: 1.3rem;
     padding: 0.2rem;
   }
-  .play{
+
+  .play {
     width: 6rem;
   }
-  .footer h3{
+
+  .footer h3 {
     font-size: 0.7rem;
     margin-bottom: 0;
   }
 }
+
 @media (min-width: 1024px) {
-.logo{
-  font-size: 3.4rem;
-}
-.imagem{
-  width: 50%;
-}
-.formulario{
-  bottom: 5rem;
-}
-.formulario input {
-  font-size: 1.5rem;
-  padding: 0.4rem;
-  width:15rem;
-}
-.play{
-  width: 9rem;
-}
-.footer h3 {
-  font-size: 1rem;
-  margin-bottom: 0;
-}
+  .logo {
+    font-size: 3.4rem;
+  }
+
+  .imagem {
+    width: 50%;
+  }
+
+  .formulario {
+    bottom: 5rem;
+  }
+
+  .formulario input {
+    font-size: 1.5rem;
+    padding: 0.4rem;
+    width: 15rem;
+  }
+
+  .play {
+    width: 9rem;
+  }
+
+  .footer h3 {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
 
 }

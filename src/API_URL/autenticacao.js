@@ -25,11 +25,9 @@ export async function apiLogin(email, password, id) {
     throw new Error("Confira suas credenciais");
   }
   const data = await response.json();
-  console.log(data);
   const authToken = data.accessToken;
   setToken(authToken);
   const userId = data.user.id;
-  console.log("userId",userId)
   setUserId(userId)
   return data;
 }
