@@ -40,17 +40,10 @@ Quinto projeto realizado durante o bootcamp de Desenvolvimento Web da @Laborator
  ![tetrisgif](https://github.com/THALINascimento/tetris-bugs/assets/114299360/f9c4433c-4206-4c7a-a484-197080ee12ac)
 
 
+![Fluxograma Pedido](https://github.com/THALINascimento/tetris-bugs/assets/114299360/fb8a1d3d-5d25-419b-8c83-a29ccca7f0f4)
 
 
-
-
-![Fluxograma Pedido](https://github.com/THALINascimento/tetris-bugs/assets/114299360/97cd00ac-7f74-492c-bdaa-fb84feee460c)
-
-
-
-
-https://github.com/THALINascimento/tetris-bugs/assets/114299360/f3666ed0-6949-4cad-9f61-77c35f9c422a
-
+ 
 ![prototipo-teris](https://github.com/THALINascimento/tetris-bugs/assets/114299360/9ddcc5ab-10b6-4da6-8ac5-5c2290cd433d)
 
 
