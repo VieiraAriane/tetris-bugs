@@ -36,4 +36,25 @@ Você pode me encontrar:</p>
 
 Burger-Queen hamburger
 Quinto projeto realizado durante o bootcamp de Desenvolvimento Web da @Laboratoria, o projeto Burger Queen tem por objeto o desenvolvimento de uma interface de atendimento e realização otimizada de pedidos para um restaurante de hambúrgueres, usou-se a integração com API e o framework React. 
+
  
+
+
+
+
+
+
+
+
+https://github.com/THALINascimento/tetris-bugs/assets/114299360/f3666ed0-6949-4cad-9f61-77c35f9c422a
+
+![prototipo-teris](https://github.com/THALINascimento/tetris-bugs/assets/114299360/9ddcc5ab-10b6-4da6-8ac5-5c2290cd433d)
+
+
+
+![tels-login-tetris](https://github.com/THALINascimento/tetris-bugs/assets/114299360/2e1b2148-0ca6-477b-a05b-852368562b8f)
+
+![tela-menu-tetris](https://github.com/THALINascimento/tetris-bugs/assets/114299360/30055011-00fc-432c-bc4a-4cf29ebd63b4)
+
+ ![tela-pedido-tetris](https://github.com/THALINascimento/tetris-bugs/assets/114299360/43c5a779-507f-490f-914b-2dec5cf0450d)
+
