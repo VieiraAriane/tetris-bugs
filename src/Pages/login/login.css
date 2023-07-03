@@ -1,7 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .figura {
-  display: flex;
+   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;  
+  margin: auto;
+  position: relative;
+  
 }
 
 .logo {
@@ -21,25 +30,27 @@
 
 .imagem {
   display: block;
+  padding: 1rem;
   max-width: 70%;
   margin: 0;
-  margin-top: 3rem;
-  margin-bottom: 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;  
+  animation: animacao 5s infinite;
+  animation-fill-mode: forwards;  
 }
 
 .formulario {
-  position: absolute;
-  margin: 0;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  bottom: 6rem;
+  padding: 1rem;
 }
 
 .formulario input {
-  width: 70%;
+  width: 90%; /* Valor ajustado */
   border: 2px solid red;
   height: auto;
   border-radius: 10px;
@@ -50,7 +61,6 @@
 }
 
 .botao-login {
-  position: relative;
   margin: 0;
   background: none;
   border: none;
@@ -80,7 +90,6 @@
   font-size: 0.9rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
-
 }
 
 .sucesso {
@@ -94,58 +103,71 @@
   color: white;
   text-align: center;
   font-size: 1.5rem;
-  margin-top: 15px;
+  margin-left: -5rem;
   border-bottom: 1px solid yellowgreen;
+  position: fixed;
 }
+ 
+  @media (max-width: 767px) {
+    .logo {
+      font-size: 2.6rem;
+      top: 1rem;  
+    }
+  
+    .imagem {
+      max-width: 90%;
+      margin-top: 5rem;
+      padding: 1rem;
+    }
+  
+    .formulario {
+      width: 90%;  
+      margin-top: 1.5rem;
+      gap: 1rem;  
+      padding: 0.5rem; 
+    }
+  
+    .formulario input {
+      width: 90%;
+    }
+  
+    .play {
+      width: 8rem; 
+    }
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      border-top: 0.1rem solid red;
+      margin: auto;
+      padding: auto;
+    }
 
-@media (max-width: 767px) {
-  .logo {
-    font-size: 2.6rem;
-    top: 4rem;
+    .footer h3 {
+      font-size: 0.8rem;  
+    }
   }
-
-  .imagem {
-    max-width: 90%;
-    margin-top: 6rem;
-  }
-
-  .formulario {
-    width: 15rem;
-    margin-top: 3rem;
-  }
-
-  .formulario input {
-    font-size: 1.3rem;
-    padding: 0.2rem;
-  }
-
-  .play {
-    width: 6rem;
-  }
-
-  .footer h3 {
-    font-size: 0.7rem;
-    margin-bottom: 0;
-  }
-}
+  
 
 @media (min-width: 1024px) {
   .logo {
-    font-size: 3.4rem;
+    font-size: 3.8rem;
   }
 
   .imagem {
-    width: 50%;
+    width: 70%;
   }
 
   .formulario {
-    bottom: 5rem;
+    bottom: 15rem;
   }
 
   .formulario input {
-    font-size: 1.5rem;
+    font-size: 1.8rem; /* Valor ajustado */
     padding: 0.4rem;
-    width: 15rem;
+    width: 75%; /* Valor ajustado */
   }
 
   .play {
@@ -156,5 +178,5 @@
     font-size: 1rem;
     margin-bottom: 0;
   }
-
+  
 }

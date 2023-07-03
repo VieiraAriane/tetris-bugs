@@ -12,6 +12,7 @@ export const adicionarItemComanda = (item, comanda, setComanda) => {
       quantidade: 1,
       precoUnitario: item.price,
       preco: item.price, // O preço total inicial é igual ao preço unitário
+      img: item.image,
     };
 
     setComanda([...comanda, novoItem]);

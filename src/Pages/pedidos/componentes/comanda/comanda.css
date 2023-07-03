@@ -85,7 +85,7 @@
 .subtotal {
   color: white;
   display: none;
-  font-size:1.7rem;
+  font-size: 1.9rem;
   letter-spacing: 0.07em;
   
 }
@@ -97,10 +97,48 @@
     position: relative;
     width: 150px;
   }
- 
-  @media (max-width: 600px) {
+
+  .modal {
+    width: 90%;
+    max-width: 500px;
+    height: 50%;
+    max-height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000000;
+    border-radius: 20px;
+    margin: auto;
+    position: relative;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+  }
+  
+  .botao-imagem-fechar {
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .status-pedido {
+    position: relative;
+    text-align: center;
+    margin: 0;
+    color: #00D8D8;
+  }
+  
+  
+  @media (max-width: 768px) {
 .nome-cliente, .mesa-cliente{
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 .nome-cliente::placeholder,
 .mesa-cliente::placeholder {
@@ -128,7 +166,20 @@
     height: 15px;
 }
 .subtotal{
-  font-size: 1rem;
+  font-size: 1.3rem;
+}
+
+.modal {
+  width: 80%;
+  max-width: 400px;
+  height: 50%;
+  max-height: 70%;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
   }
 

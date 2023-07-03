@@ -8,12 +8,16 @@ import BotaoMais from "../../../../Imagens/botaoMais.png";
 import BotaoMenos from "../../../../Imagens/botaoMenos.png";
 import BotaoExluir from "../../../../Imagens/botaoExcluir.png";
 import "./comanda.css";
+import Modal from "react-modal";
+
+Modal.setAppElement('#root');
 
 const Comanda = ({ comanda, setComanda }) => {
   const [cliente, setCliente] = useState("");
   const [mesa, setMesa] = useState("");
   const [total, setTotal] = useState(0);
   const [erro, setErro] = useState("");
+  const [modalIsOpen, setIsOpen] = useState(false);
 
   const enviarComanda = async (e) => {
     e.preventDefault();
@@ -22,15 +26,17 @@ const Comanda = ({ comanda, setComanda }) => {
     setComanda([]);
     setErro("");
     if ((!cliente && !mesa) || !cliente || !mesa || comanda.length === 0) {
-      setErro("A comanda não pode ser enviada vazia");
+      setErro("comanda não pode ser enviada");
       return;
     }
     try {
       await enviarPedido(comanda, cliente, mesa);
+      setIsOpen(true);
     } catch (error) {
       setErro(error.message);
     }
-    alert ("Pedidos enviado com sucesso! adicional modal");
+    
+  
   };
 
   const aumentar = (item) => {
@@ -56,6 +62,10 @@ const Comanda = ({ comanda, setComanda }) => {
   useEffect(() => {
     subTotal();
   }, [comanda]);
+
+  const handleCloseModal = () => {
+    setIsOpen(false);
+  };
 
   return (
     <>
@@ -127,7 +137,25 @@ const Comanda = ({ comanda, setComanda }) => {
             className="enviar"
           />
         </button>
-        {erro && <p className="erro">{erro}</p>}
+        <Modal
+          isOpen={modalIsOpen}
+          onRequestClose={handleCloseModal}
+          contentLabel="Status Pedidos"
+          className="modal"
+         
+        >
+      <button onClick={handleCloseModal} className="closeButton">
+          <img src={BotaoExluir} alt="Excluir" className="botao-imagem-fechar"/>
+          </button>
+          <h1 className="status-pedido">
+            Pedido enviado com sucesso, aguarde  ...
+          </h1>
+         
+        </Modal>
+
+        <div>
+          {erro && <p className="erro">{erro}</p>}
+        </div>
       </div>
     </>
   );
