@@ -1,0 +1,61 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.pedido-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap:15px;
+  margin: 15px;
+}
+
+.pedido-item {
+  padding: 10px;
+  border: 2px solid greenyellow;
+  letter-spacing: 0.07em;
+  background-color: #2e2e2e;
+}
+
+.resumo-pedido {
+  color: dodgerblue;
+  text-align: center;
+  font-size: 1.8rem;
+  padding-bottom: 13px;
+}
+
+.titulo {
+  color: white;
+  margin-bottom: 8px;
+  text-align: start;
+  font-size: 1.5rem;
+  letter-spacing: 0.07em;
+}
+.titulo p{
+  margin: 0;
+}
+.status {
+  text-align: center;
+  color: white;
+  border: 1px solid red;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 1.5rem;
+  letter-spacing: 0.07em;
+}
+
+.pedido {
+  color: aqua;
+  text-align: center;
+  font-size: 1.8rem;
+  letter-spacing: 0.07em;
+  margin-bottom: 10px;
+}
+.produto-qty {
+  font-size: 1.5rem;
+  letter-spacing: 0.07em;
+  margin-right: 5px;
+}
+.produto-name {
+  font-size: 1.5rem;
+  letter-spacing: 0.07em;
+}

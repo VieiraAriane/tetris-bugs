@@ -1,0 +1,84 @@
+.menu-opcoes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 26px;
+}
+.cafe, .principal{
+  color:white;
+  text-decoration: none;
+  font-size: 2rem;
+  border: 1px solid #00D8D8;
+  padding: 11px 14px 11px 14px;
+  border-radius: 3px;
+  background-color: black;
+  letter-spacing: 0.04em;
+
+ }
+.cafe:hover,.principal:hover {
+  background-color: #00D8D8;
+  color: black;
+}
+/* pagina de atendimento */
+.pagina-atendimento {
+  display: grid;
+  grid-template-columns: 0.6fr 1fr;
+}
+
+ .menu-selecao{
+  display: flex;
+  flex-direction: row-reverse;
+ 
+  margin-left: 5%;
+} 
+/* tratando da lista de itens */
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-family: 'THUNDERBOLT73-Regular', sans-serif;
+  font-size: 1.7rem;
+  width: auto;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgba(54, 11, 76, 0.9);
+  margin-bottom: 2%;
+  border: 1px solid white;
+  letter-spacing: 0.04em;
+}
+
+.item-name,
+.item-price {
+ 
+  margin: auto;
+  position: relative;
+}
+
+.item-image-menu {
+  width: 25%;
+  height: auto;
+  margin:auto; /* Remove margem à direita */
+  position: relative;
+  object-fit: cover;
+}
+
+
+  
+    
+  
+@media (max-width: 800px) {
+  .cafe, .principal{
+    font-size: 1.2rem;
+    padding: 5px 10px 5px 10px;
+  }
+  .menu-item{
+    font-size: 1.1rem;
+    padding: 5px;
+    margin-right: 5px;
+  }
+  .item-price{
+    margin-top: 0;
+  }
+}

@@ -1,37 +1,42 @@
-import React from "react";
-import { render, screen, fireEvent, waitFor } from "@testing-library/react";
-import "@testing-library/jest-dom";
-import Logar from "../Pages/Login";
-import { apiLogin } from "../API_URL/login";
+import React from 'react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { MemoryRouter } from "react-router-dom";
+import "@testing-library/jest-dom/extend-expect"; 
+import Logar from '../Pages/login/Login';
+import { apiLogin } from '../API_URL/autenticacao';
 
-jest.mock("../API_URL/login");
+jest.mock("../API_URL/autenticacao");
 
 describe("Logar", () => {
-  it("renders the login form", () => {
-    render(<Logar />);
-
+  it("Renderiza a página de login", () => {
+    render(
+      <MemoryRouter>
+        <Logar />
+      </MemoryRouter>
+    );
     expect(screen.getByText("Hamburgueria")).toBeInTheDocument();
-
-    const logoElements = screen.getAllByAltText("Logo tetris em movimento");
-    expect(logoElements.length).toBe(2);
-
-    const emailInput = screen.getByPlaceholderText("Digite seu e-mail");
-    expect(emailInput).toBeInTheDocument();
-
-    const passwordInput = screen.getByPlaceholderText("Digite sua senha");
-    expect(passwordInput).toBeInTheDocument();
-
-    const buttonElement = screen.getByRole("button");
-    expect(buttonElement).toBeInTheDocument();
+    expect(screen.getByPlaceholderText("Digite seu e-mail")).toBeInTheDocument();
+    expect(screen.getByPlaceholderText("Digite sua senha")).toBeInTheDocument();
+    expect(screen.getByRole("button")).toBeInTheDocument();
   });
 
   it("loga com sucesso quando um email e senha válidos são fornecidos", async () => {
     const response = {
-      status: 400,
-      json: () => Promise.resolve("Incorrect password"),
+      status: 200,
+      user: {
+        role: 'atendente',
+        role: 'chef',
+        role: 'adm',
+
+      }
     };
     apiLogin.mockResolvedValueOnce(response);
-    render(<Logar />);
+
+    render(
+      <MemoryRouter>
+        <Logar />
+      </MemoryRouter>
+    );
 
     const emailInput = screen.getByPlaceholderText("Digite seu e-mail");
     const passwordInput = screen.getByPlaceholderText("Digite sua senha");
@@ -43,8 +48,7 @@ describe("Logar", () => {
     fireEvent.click(buttonElement);
 
     await waitFor(() => {
-      const errorElement = screen.getByText("Senha incorreta!");
-      expect(errorElement).toBeInTheDocument();
+      expect(screen.getByText("Login bem-sucedido!")).toBeInTheDocument();
     });
   });
-});
+ });

@@ -1,91 +1,53 @@
+@font-face {
+  font-family: 'THUNDERBOLT73-Regular';
+  src: url('./fonte/THUNDERBOLT73-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'THUNDERBOLT73-Bold';
+  src: url('./fonte/THUNDERBOLT73-Bold.otf') format('opentype');
+}
+
 body {
+  font-family: 'THUNDERBOLT73-Regular', sans-serif;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: Fredoka One;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
- }
- #root{
-  margin: 0;
-   display: flex;
-   flex-direction: column;
-   align-items:center;
-   justify-content: space-around;
-   min-height: 80vh;
- }
- .logo {
-  margin: 0;
-   color: #00D8D8;
-   font-size: 3rem;
-   position: relative;
-   top: 4rem;
-   letter-spacing: 0.06em; /* Valor positivo para aumentar o espaçamento */
- }
- .imagem {
-   position: relative;
-   max-width: 80%;
-   margin: 0;
-  bottom: 1rem;
-
 }
-.formulario{
-  position: relative;
+
+.root {
   margin: 0;
   display: flex;
   flex-direction: column;
-  width: 23rem;
-  gap: 1rem;
-  height: 8em;
-  bottom: 1rem;
-  }
- .formulario input{
-  border: 2px solid red;
-  height: 3em;
-  border-radius: 10px;
-  text-align: center;
-  color: white ;
-  background-color: transparent;
- }
-input{
-  background-color: transparent;
-  font-size: 1.7rem;
-}
-input[type="email"] {
-  background-color: black;
-  color: white;
+  align-items: center;
+  
 }
 
-input[type="email"]::placeholder {
+input::placeholder {
+  font-family: 'THUNDERBOLT73-Regular', sans-serif;
   color: white;
 }
-
-input::placeholder{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: antiquewhite;
-}
-.botao-login {
-  margin: 0;
-  background: none;
-  border: none;
+/* input{
+  font-family: 'THUNDERBOLT73-Regular', sans-serif;
+ } */
+ul {
+  color: white;
   padding: 0;
-  cursor: pointer;
-}
-.play {
-  margin: 0;
-  width: 15em;
-}
-.footer {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
-  text-align: center;
-  font-size: 1.3rem;
-  border-top: 0.1rem solid red;
-  margin: 8rem 0 1rem 0;
+  list-style-type: none;
 }
 
-p {
-  color: white;
-  text-align: center;
-  font-size: 1.3rem;
+li {
+
+  text-decoration: none;
+}
+span{
+  font-family: 'THUNDERBOLT73-Regular', sans-serif;
+}
+button {
+  font-family: 'THUNDERBOLT73-Bold', sans-serif;
+  background-color: transparent;
+  border: none;
 }
