@@ -30,6 +30,7 @@ function Cozinha() {
       <p className="titulo">Cliente: {pedido.client}</p>
       <p className="titulo">Mesa: {pedido.mesa}</p>
       <p className="status">{pedido.status}</p>
+     
            <ul>
             <p className="pedido">Pedido:</p>
         {pedido.products.map((item) => (

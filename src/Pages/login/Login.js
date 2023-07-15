@@ -5,14 +5,14 @@ import BotaoLogin from '../../Imagens/botao.png'
 import { apiLogin } from '../../API_URL/autenticacao'
 import './login.css'
 
-const Logar = () => {
+export const Logar = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [erro, setErro] = useState("");
   const [loginSucesso, setLoginSucesso] = useState(false); 
   const redir = useNavigate();
 
-  const BotaoLogar = async (e) => {
+const BotaoLogar = async (e) => {
     e.preventDefault();
     setErro("");
     try {
@@ -33,8 +33,8 @@ const Logar = () => {
   };
 
   return (
-    <>
-      <div className="root">
+    <>   <div className="root">
+   
         <section className="figura">
           <p className="logo">Hamburgueria</p>
           <figure className="imagem-container">
@@ -67,9 +67,12 @@ const Logar = () => {
               className="play"
             />
           </button>
-          {erro && <p className="erro">{erro}</p>}
-          {loginSucesso && <p className="sucesso">Login bem-sucedido!</p>}
+          
+          <div>
+        {erro && <p className="erro">{erro}</p>}
+          {loginSucesso && <p className="sucesso">Login bem-sucedido!</p>}</div>
         </form>
+       
         <footer className="footer">
           <h3>Desenvolvido por Ariane e Thalita</h3>
         </footer>
