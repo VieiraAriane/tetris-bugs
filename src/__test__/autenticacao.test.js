@@ -52,8 +52,8 @@ describe('apiLogin', () => {
     const password = 'wrongpassword';
     const id = 'mockId';
 
-    // Assertions
     await expect(apiLogin(email, password, id)).rejects.toThrow('Confira suas credenciais');
     expect(fetch).toHaveBeenCalledTimes(1);
   });
 });
+
