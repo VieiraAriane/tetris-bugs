@@ -1,41 +1,45 @@
-.menu-opcoes{
+.menu-opcoes {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  gap: 26px;
+  padding: 1rem;
+  gap: 1rem;
 }
-.cafe, .principal{
-  color:white;
+
+.cafe,
+.principal {
+  color: white;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.7rem;
   border: 1px solid #00D8D8;
-  padding: 11px 14px 11px 14px;
+  padding: 4px 13px 4px 13px;
   border-radius: 3px;
   background-color: black;
   letter-spacing: 0.04em;
+}
 
- }
-.cafe:hover,.principal:hover {
+.cafe:hover,
+.principal:hover {
   background-color: #00D8D8;
   color: black;
 }
+
 /* pagina de atendimento */
 .pagina-atendimento {
   display: grid;
   grid-template-columns: 0.6fr 1fr;
-  gap: 2.5rem;
 }
 
- .menu-selecao{
+.menu-selecao {
   display: flex;
   flex-direction: row-reverse;
-  margin-top: 5rem;
+  margin-top: 1rem;
   margin-left: 5%;
   padding: 1.5rem;
-  width: 95%;
- 
-} 
+  width: 70%;
+
+}
+
 /* tratando da lista de itens */
 
 .menu-item {
@@ -44,83 +48,64 @@
   align-items: center;
   color: white;
   font-family: 'THUNDERBOLT73-Regular', sans-serif;
-  font-size: 1.5rem;
-  width: auto;
-  max-width: 80%;
+  width: 80%;
   border-radius: 10px;
   text-align: center;
   background-color: rgba(54, 11, 76, 0.9);
   margin-bottom: 3%;
   border: 1px solid white;
   letter-spacing: 0.04em;
-  padding: 0.5rem;
-} 
+  padding: 0.2rem;
+}
 
 .item-name,
 .item-price {
-  margin: auto;
-  position: relative;
-  margin-block-end: auto;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
 }
 
 .item-image-menu {
-  max-width: 35%;
+  width: 30%;
   height: auto;
-  margin:auto;  
   position: relative;
   object-fit: cover;
 }
 
-    
-@media (min-width: 668px) and (max-width: 1023px) {
-  .menu-selecao{
-    display: flex;
-    flex-direction: row-reverse;
-    margin-left: 5%;
-   
-  } 
+@media (max-width: 767px) {
+  .menu-item {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    width: 6rem;
+    padding: 1px;
+  }
+
+  .item-name,
+  .item-price {
+    font-size: 1.2rem;
+  }
 
   .item-image-menu {
-    max-width: 35%;
-    margin: auto;
-    height: auto;
-    margin:auto;  
-    position: relative;
-    object-fit: cover;
+    display: none;
   }
-  .menu-item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    color: white;
-    font-family: 'THUNDERBOLT73-Regular', sans-serif;
-    font-size: 1.5rem;
-    width: auto;
-    border-radius: 10px;
-    text-align: center;
-    background-color: rgba(54, 11, 76, 0.9);    
-    border: 1px solid white;
-    letter-spacing: 0.04em;
-    padding: 0.5rem;
-    
-    }
+
+
 }
 
- 
-
 @media (min-width: 1024px) {
-   .menu-selecao{
+  .menu-selecao {
     display: flex;
     flex-direction: row-reverse;
     margin-left: 5%;
-  } 
+  }
 
   .item-image-menu {
     max-width: 40%;
     margin: auto;
-  
+
   }
- 
+
   .menu-item {
     display: flex;
     flex-direction: row;
@@ -131,12 +116,10 @@
     width: auto;
     border-radius: 10px;
     text-align: center;
-    background-color: rgba(54, 11, 76, 0.9);    
+    background-color: rgba(54, 11, 76, 0.9);
     border: 1px solid white;
     letter-spacing: 0.04em;
     padding: 0.5rem;
     max-width: 85%;
-    }
   }
-
- 
+}

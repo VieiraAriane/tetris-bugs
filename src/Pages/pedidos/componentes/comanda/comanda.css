@@ -19,6 +19,7 @@
 
 .nome-cliente,
 .mesa-cliente {
+  font-family: 'THUNDERBOLT73-Regular';
   margin: 10px;
   margin-bottom: 50px;
   height: 3rem;
@@ -27,164 +28,183 @@
   border-color: transparent;
   border-bottom: 2px solid rgba(54, 11, 76, 1.5);
   text-align: center;
-  font-size:1.5rem;
+  font-size: 1.5rem;
   letter-spacing: 0.04em;
 
 }
-.resumo-comanda{
-  margin: 0;
+
+.resumo-comanda {
+  margin-bottom: 1rem;
   color: white;
   font-size: 1.8rem;
   padding: 5px;
   letter-spacing: 0.07em;
 }
+
 .nome-cliente::placeholder,
 .mesa-cliente::placeholder {
   color: white;
-  font-size:1.6rem;
+  font-size: 1.6rem;
   letter-spacing: 0.07em;
 }
-.lista-comanda{
+
+.lista-comanda {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
+  width: 60%;
   border-radius: 10px;
   text-align: center;
   border: 2px solid rgba(54, 11, 76, 1.5);
+  max-height: 60%;
+  overflow: scroll;
+
 }
-.comanda-item{
-    display: flex;
-    flex-direction: column;
-    color: white;
-    font-size: 1.5rem;
-    align-items: center;
-    border: 1px solid #00D8D8;
-    margin-bottom: 8px;
-    padding:5px;
-    border-radius: 5px;
-    letter-spacing: 0.06em;
-  }
-  .comanda-item p {
-    font-size: 1.6rem;
-  }
-  .item-name{
-    margin-bottom: 10px;
-  }
-   .sessao-botoes {
-    display: flex;
-    gap: 15px;
-  }
+
+.comanda-item {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 1.6rem;
+  align-items: center;
+  border: 1px solid #00D8D8;
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 5px;
+  letter-spacing: 0.06em;
+}
+
+.item-name {
+  margin-bottom: 5px;
+}
+
+.sessao-botoes {
+  display: flex;
+  gap: 15px;
+}
+
 .aumentar img,
 .diminuir img,
 .excluir img {
-  width: 25px;
-  height: 25px;
+  width: 22px;
+  height: 22px;
 }
 
 .subtotal {
   color: white;
   display: none;
-  font-size: 1.9rem;
+  font-size: 1.7rem;
   letter-spacing: 0.07em;
-  
+  margin-bottom: 1rem;
 }
 
-  .subtotal.mostrar {
-    display: block;
-  }
-  .enviar{
-    position: relative;
-    width: 150px;
-  }
+.subtotal.mostrar {
+  display: block;
+}
 
-  .modal {
-    width: 90%;
-    max-width: 500px;
-    height: 50%;
-    max-height: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #000000;
-    border-radius: 20px;
-    margin: auto;
-    position: relative;
-    margin: auto;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-  }
-  
-  .botao-imagem-fechar {
-    width: 3rem;
-    height: 3rem;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
-  
-  .status-pedido {
-    position: relative;
-    text-align: center;
-    margin: 0;
-    color: #00D8D8;
-  }
-  
-  
-  @media (max-width: 768px) {
-.nome-cliente, .mesa-cliente{
-  font-size: 1.2rem;
-}
-.nome-cliente::placeholder,
-.mesa-cliente::placeholder {
-  color: white;
-  font-size: 1.2rem;
-}
-.lista-comanda{
-  width: 70%;
-}
-.lista-comanda p{
-   font-size: 1.2rem;
-   padding: 0;
-}
-.enviar{
-  width: 95px;
-}
-.item-name, .item-price{
-  font-size: 1rem;
-}
-.comanda-item{
-  padding: 10px;
-}
-.aumentar img, .diminuir img, .excluir img {
-    width: 15px;
-    height: 15px;
-}
-.subtotal{
-  font-size: 1.3rem;
+.enviar {
+  position: relative;
+  width: 7rem;
 }
 
 .modal {
-  width: 80%;
-  max-width: 400px;
-  height: 50%;
-  max-height: 70%;
+  width: 50%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #000000;
+  border-radius: 20px;
+  margin: auto;
+  position: relative;
   margin: auto;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+
 }
+
+.botao-imagem-fechar {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.status-pedido {
+  position: relative;
+  text-align: center;
+  margin: 0;
+  color: #00D8D8;
+}
+
+
+@media (max-width: 767px) {
+  .nome-cliente,
+  .mesa-cliente {
+    font-size: 1.2rem;
   }
 
+  .nome-cliente::placeholder,
+  .mesa-cliente::placeholder {
+    font-size: 1.2rem;
+  }
 
-/* cliente e mesa: fonte de fundo ta no nome-cliente. O de cima no plachehorlder */
-/* Apresentar pedidos em ordem, do antigo para mais recente */
-/* o chefe deve atualizar o status e enviar uma notifição de pronto para o atendente */
-/* apresentar tempo total do envio ate a finalização */
+  .lista-comanda {
+    width: 80%;
+    padding: 0.5rem;
+  }
+
+  .lista-comanda p {
+    font-size: 1.2rem;
+    padding: 0;
+  }
+
+  .enviar {
+    width: 95px;
+  }
+
+  .item-name,
+  .item-price {
+    font-size: 1rem;
+  }
+
+  .comanda-item {
+    padding: 0;
+  }
+
+  .aumentar img,
+  .diminuir img,
+  .excluir img {
+    width: 15px;
+    height: 15px;
+  }
+.erro{
+  font-size: 1rem;
+}
+  .subtotal {
+    font-size: 1.3rem;
+  }
+
+  .modal {
+    font-size: 0.7rem;
+    width: 60%;
+    max-width: 80%;
+    height: 30%;
+    max-height: 70%;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .botao-imagem-fechar{
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+}
