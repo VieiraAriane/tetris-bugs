@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Modal from "react-modal";
 import { diminuirQuantidade } from "../../../../uteis/diminuirQuantidade";
 import { adicionarItemComanda } from "../../../../uteis/adicionarItemComanda";
 import { calcularSubtotal } from "../../../../uteis/calcularSubtotal";
@@ -8,7 +9,6 @@ import BotaoMais from "../../../../Imagens/botaoMais.png";
 import BotaoMenos from "../../../../Imagens/botaoMenos.png";
 import BotaoExluir from "../../../../Imagens/botaoExcluir.png";
 import "./comanda.css";
-import Modal from "react-modal";
 
 Modal.setAppElement('#root');
 
@@ -23,20 +23,22 @@ const Comanda = ({ comanda, setComanda }) => {
     e.preventDefault();
     setCliente("");
     setMesa("");
-    setComanda([]);
     setErro("");
     if ((!cliente && !mesa) || !cliente || !mesa || comanda.length === 0) {
-      setErro("comanda não pode ser enviada");
+      setErro("Preencha todos os itens da comanda");
       return;
     }
     try {
       await enviarPedido(comanda, cliente, mesa);
       setIsOpen(true);
+      setComanda([]);
     } catch (error) {
-      setErro(error.message);
-    }
-    
-  
+      if (comanda.length > 0) {
+        setErro(error.message);
+      } else {
+        setErro("Erro ao enviar o pedido");
+      }
+    } 
   };
 
   const aumentar = (item) => {

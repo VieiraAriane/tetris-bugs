@@ -27,12 +27,13 @@ body {
 }
 
 input::placeholder {
-  font-family: 'THUNDERBOLT73-Regular', sans-serif;
+  font-family: 'THUNDERBOLT73-Regular';
   color: white;
 }
-/* input{
-  font-family: 'THUNDERBOLT73-Regular', sans-serif;
- } */
+input:focus {
+  outline: none;
+}
+
 ul {
   color: white;
   padding: 0;
@@ -40,9 +41,9 @@ ul {
 }
 
 li {
-
   text-decoration: none;
 }
+
 span{
   font-family: 'THUNDERBOLT73-Regular', sans-serif;
 }

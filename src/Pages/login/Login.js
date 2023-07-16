@@ -44,16 +44,17 @@ const BotaoLogar = async (e) => {
 
         <form className="formulario">
           <input
-            className="input"
+            className="email"
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Digite seu e-mail"
             type="email"
             value={email}
             name="email"
             id="email"
+            autocomplete="off"
           />
           <input
-            className="input"
+            className="senha"
             onChange={(e) => setPassword(e.target.value)}
             type="password"
             placeholder="Digite sua senha"
@@ -68,12 +69,12 @@ const BotaoLogar = async (e) => {
             />
           </button>
           
-          <div>
-        {erro && <p className="erro">{erro}</p>}
-          {loginSucesso && <p className="sucesso">Login bem-sucedido!</p>}</div>
         </form>
-       
+
+        {erro && <p className="erro">{erro}</p>}
+          {loginSucesso && <p className="sucesso">Login bem-sucedido!</p>}
         <footer className="footer">
+
           <h3>Desenvolvido por Ariane e Thalita</h3>
         </footer>
       </div>
