@@ -23,8 +23,8 @@
 Você pode me encontrar:</p>
 <p align="center" dir="auto">
  
-<a href="https://www.linkedin.com/in/thalita-nascimento-3b087a98/" rel="nofollow"><img src="https://github.com/sarthak77/sarthak77/raw/master/icons/icons8-linkedin-circled-48.png" alt="LinkedIn" style="max-width: 100%;"></a> &nbsp; &nbsp;
-<a href="mailto:thalita.secre@gmail.com"><img src="https://github.com/sarthak77/sarthak77/raw/master/icons/icons8-gmail-48.png" alt="Gmail" style="max-width: 100%;"></a> &nbsp; &nbsp;
+<a href="https://www.linkedin.com/in/arianevieiradev/" rel="nofollow"><img src="https://github.com/sarthak77/sarthak77/raw/master/icons/icons8-linkedin-circled-48.png" alt="LinkedIn" style="max-width: 100%;"></a> &nbsp; &nbsp;
+<a href="mailto:arianevieira26@gmail.com"><img src="https://github.com/sarthak77/sarthak77/raw/master/icons/icons8-gmail-48.png" alt="Gmail" style="max-width: 100%;"></a> &nbsp; &nbsp;
 
 </p>
 
