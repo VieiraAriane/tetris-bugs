@@ -10,7 +10,7 @@ import BotaoMenos from "../../../../Imagens/botaoMenos.png";
 import BotaoExluir from "../../../../Imagens/botaoExcluir.png";
 import "./comanda.css";
 
-Modal.setAppElement('#root');
+Modal.setAppElement("#root");
 
 const Comanda = ({ comanda, setComanda }) => {
   const [cliente, setCliente] = useState("");
@@ -38,7 +38,7 @@ const Comanda = ({ comanda, setComanda }) => {
       } else {
         setErro("Erro ao enviar o pedido");
       }
-    } 
+    }
   };
 
   const aumentar = (item) => {
@@ -144,23 +144,24 @@ const Comanda = ({ comanda, setComanda }) => {
           onRequestClose={handleCloseModal}
           contentLabel="Status Pedidos"
           className="modal"
-         
         >
-      <button onClick={handleCloseModal} className="closeButton">
-          <img src={BotaoExluir} alt="Excluir" className="botao-imagem-fechar"/>
+          <button onClick={handleCloseModal} className="closeButton">
+            <img
+              src={BotaoExluir}
+              alt="Excluir"
+              className="botao-imagem-fechar"
+            />
           </button>
           <h1 className="status-pedido">
-            Pedido enviado com sucesso, aguarde  ...
+            Pedido enviado com sucesso, aguarde ...
           </h1>
-         
         </Modal>
 
-        <div>
-          {erro && <p className="erro">{erro}</p>}
-        </div>
+        <div>{erro && <p className="erro">{erro}</p>}</div>
       </div>
     </>
   );
 };
 
 export default Comanda;
+
